@@ -1,60 +1,210 @@
-# Refactor a Sudoku Game written in Python Flask
+# Sudoku Game – Refactoring Legacy Code with GitHub Copilot
 
-Use this simple Sudoku game as a starting point to practice your skills with GitHub Copilot. The goal is to refactor the code to use modern technologies, while also adding new features and improving the overall user experience.
+## Project Overview
 
-## Getting Started
+This project is a web-based Sudoku game built using **Python Flask** as part of the **Refactoring Legacy Code with GitHub Copilot** project.
 
-Follow these instructions to get a copy of the project up and running on your local machine.
+The objective of this project is to modernize and improve an existing legacy Sudoku application by refactoring the code into a modular structure, implementing new gameplay features, enhancing the user interface, and demonstrating the responsible use of GitHub Copilot throughout the development process.
 
-### Dependencies
+GitHub Copilot was used as an AI programming assistant to help with code generation, refactoring, testing, debugging, and documentation. All AI-generated code was reviewed, modified, or rejected where necessary to ensure correctness and maintainability.
 
-```
-- Modern web browser (Chrome, Firefox, Edge, etc.)
+---
+
+## Features
+
+### Core Sudoku Features
+
+- Generate valid Sudoku puzzles
+- Ensure every generated puzzle has exactly one unique solution
+- Easy, Medium, and Hard difficulty levels
+- Locked prefilled cells
+- Immediate validation of player moves
+- Congratulations message upon successful completion
+
+### Gameplay Features
+
+- Hint button (fills one correct cell and locks it)
+- Check button (highlights incorrect entries)
+- Game timer
+- Top 10 leaderboard
+- Persistent leaderboard using browser Local Storage
+- Dark Mode toggle
+
+### User Interface
+
+- Responsive design for desktop and mobile devices
+- Alternating colors for each 3×3 Sudoku region
+- Clean and intuitive interface
+- Light and Dark theme support
+
+### Code Quality
+
+- Refactored legacy code into modular components
+- Reusable functions
+- Clear project structure
+- Error handling
+- Unit testing with Pytest
+
+---
+
+## Technologies Used
+
 - Python 3
+- Flask
+- HTML5
+- CSS3
+- JavaScript
+- Git
+- GitHub
+- GitHub Copilot
+- Pytest
+
+---
+
+## Project Structure
+
+```
+starter/
+│
+├── app.py
+├── sudoku_logic.py
+├── requirements.txt
+├── README.md
+├── instruction.md
+│
+├── templates/
+│   └── index.html
+│
+├── static/
+│   ├── styles.css
+│   └── main.js
+│
+├── tests/
+│
+└── Screenshots/
 ```
 
-### Installation
+---
 
-1. Fork this repository to your GitHub account. (You can use the "Fork" button on the top right corner of the repository page.)
+## Installation
 
-2. Clone your forked repository to your local machine.
+Clone the repository:
 
-3. Open a terminal window and navigate to the "github-copilot-python/starter" directory.
+```bash
+git clone https://github.com/AishaniB08/Sudoku-Game---Refactoring-Legacy-code-With-Copilot.git
+```
 
-4. Create a Python virtual environment and activate it (optional but highly recommended).
+Navigate to the project folder:
+
+```bash
+cd starter
+```
+
+Create a virtual environment:
+
+### Windows
+
+```bash
+python -m venv .venv
+.venv\Scripts\activate
+```
+
+### macOS/Linux
 
 ```bash
 python3 -m venv .venv
 source .venv/bin/activate
 ```
 
-5. Install required Python packages.
+Install the required packages:
 
 ```bash
 pip install -r requirements.txt
 ```
 
-6. Run the Flask app.
+---
+
+## Running the Application
+
+Start the Flask server:
 
 ```bash
 python app.py
 ```
 
-7. Open http://127.0.0.1:5000 in your browser.
+Open your browser and visit:
 
-## Project Instructions
+```
+http://127.0.0.1:5000
+```
 
-Use GitHub Copilot to refactor the code for this game to add more advanced features. The goal is to create a more modern and maintainable codebase and add additional functionality to the final product. You can use any combination of code completion and chat features, like Ask, Edit, or Agent modes.
+---
 
-- Errors should be handled gracefully with appropriate messages to the user.
-- Implement a Sudoku board generator that creates a valid Sudoku puzzle with a unique solution.
-- Add a timer to track how long it takes to solve the puzzle.
-- Implement a solution checker that verifies if the user's solution is correct using event delegation.
-- Add a difficulty selector to allow users to choose between easy, medium, and hard puzzles.
-- Add a hint feature that provides clues for the user that are noted with unique colors.
-- Add a check puzzle button that checks the current state of the board against the solution.
-- User should get immediate feedback on their input, such as highlighting invalid entries.
-- Top 10 scores should be saved in local storage and displayed on the page with the user's name, time taken, hints used, and difficulty level.
-- The game should be responsive and work well on both desktop and mobile devices.
-- UI colors should be visually appealing and accessible.
-- Completed and correct puzzles should display a congratulatory message with the time taken and hints used and ask for the user's name for Top 10 times.
+## Running the Tests
+
+Install Pytest if necessary:
+
+```bash
+pip install pytest
+```
+
+Run the test suite:
+
+```bash
+pytest
+```
+
+---
+
+## GitHub Copilot Usage
+
+GitHub Copilot was used throughout the project to assist with:
+
+- Setting up the testing framework
+- Refactoring legacy code
+- Generating Sudoku puzzles with a unique solution
+- Implementing difficulty levels
+- Creating Hint and Check features
+- Building the leaderboard
+- Implementing Local Storage
+- Styling the Sudoku grid
+- Supporting Dark Mode
+- Improving documentation
+
+All generated suggestions were reviewed before being accepted, modified when necessary, and rejected when they did not meet the project requirements.
+
+---
+
+## Screenshots
+
+The project includes a **Screenshots** folder containing Copilot conversations and project milestones, including:
+
+- Testing framework setup
+- Unique solution generation
+- Difficulty selector
+- Immediate validation
+- Hint and Check implementation
+- Leaderboard and Local Storage
+- Grid styling
+- Dark Mode implementation
+
+---
+
+## Future Improvements
+
+Possible future enhancements include:
+
+- Note Mode (candidate numbers)
+- Sudoku solver animation
+- WCAG 2.1 AA accessibility improvements
+- Keyboard shortcuts
+- Undo/Redo functionality
+- Additional puzzle themes
+- Online leaderboard
+- Multiple board sizes
+
+---
+
+## License
+
+This project is developed for educational purposes as part of the **GitHub Copilot: Refactoring Legacy Code** assignment.
